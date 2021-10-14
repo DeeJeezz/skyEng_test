@@ -10,7 +10,7 @@ from api import models, serializers
 
 
 class TestResumeUpdate(TestCase):
-    fixtures = ['resumes.json']
+    fixtures = ['users.json', 'resumes.json']
 
     def setUp(self) -> None:
         self.client = test.APIClient()

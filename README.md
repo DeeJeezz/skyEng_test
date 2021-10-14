@@ -15,7 +15,7 @@ GET /api/v1/resume/
 [
     {
         "id": "26c940a1-7228-4ea2-a3bc-e6460b172040",
-        "status": "Just Watching",
+        "status": "Just watching",
         "education": "Higher",
         "owner": "admin",
         "grade": 3,
@@ -29,7 +29,7 @@ GET /api/v1/resume/
     },
     {
         "id": "e13ad0ce-c55f-4299-aa5e-f8461d237955",
-        "status": "Looking For Job",
+        "status": "Looking for a job",
         "education": "Higher",
         "owner": "admin",
         "grade": 5,
@@ -43,7 +43,7 @@ GET /api/v1/resume/
     },
     {
         "id": "84b08e73-6013-4f8c-ac12-9bc9659a957a",
-        "status": "Not Looking",
+        "status": "Not looking for a job",
         "education": "Secondary",
         "owner": "user",
         "grade": 2,
@@ -73,7 +73,7 @@ GET /api/v1/resume/26c940a1-7228-4ea2-a3bc-e6460b172040/
 ```json
 {
     "id": "26c940a1-7228-4ea2-a3bc-e6460b172040",
-    "status": "Just Watching",
+    "status": "Just watching",
     "education": "Higher",
     "owner": "admin",
     "grade": 3,
@@ -94,13 +94,18 @@ GET /api/v1/resume/26c940a1-7228-4ea2-a3bc-e6460b172040/
 
 ###### Пример запроса
 
+Basic auth:
+* `admin:admin`
+* `user:user`
+
+
 ```
 PATCH /api/v1/resume/26c940a1-7228-4ea2-a3bc-e6460b172040/
 ```
 ```json
 {
     "id": "26c940a1-7228-4ea2-a3bc-e6460b172040",
-    "status": "Just Watching",
+    "status": "Just watching",
     "education": "Higher",
     "owner": "admin",
     "grade": 3,
@@ -119,7 +124,7 @@ PATCH /api/v1/resume/26c940a1-7228-4ea2-a3bc-e6460b172040/
 ```json
 {
     "id": "26c940a1-7228-4ea2-a3bc-e6460b172040",
-    "status": "Just Watching",
+    "status": "Just watching",
     "education": "Higher",
     "owner": "admin",
     "grade": 3,
@@ -139,6 +144,9 @@ PATCH /api/v1/resume/26c940a1-7228-4ea2-a3bc-e6460b172040/
 virtualenv venv
 . venv/bin/activate
 pip install -r requirements.txt
+python manage.py migrate
+python manage.py loaddata api/fixtures/users.json
+python manage.py loaddata api/fixtures/resumes.json
 
 # Тесты
 coverage run manage.py test

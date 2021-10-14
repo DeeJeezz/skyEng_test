@@ -1,0 +1,21 @@
+[
+  {
+    "model": "auth.User",
+    "pk": "1",
+    "fields": {
+      "username": "admin",
+      "email": "admin@admin.com",
+      "password": "pbkdf2_sha256$260000$m2P3Wdvq9q3KClrfQc2zVN$TU8WdmUe1KLt5mH32VL1OYKYW9P0VhXUPhv90/r8CR4=",
+      "is_superuser": true
+    }
+  },
+  {
+    "model": "auth.User",
+    "pk": "2",
+    "fields": {
+      "username": "user",
+      "email": "user@user.com",
+      "password": "pbkdf2_sha256$260000$SK1s550ZfHDALbkU3ERz2W$9oJvvFcB+IjApiX+Mq1JRrLAR3SUdsA4/5i2LbdjRkY="
+    }
+  }
+]

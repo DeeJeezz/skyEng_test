@@ -4,21 +4,21 @@ from django.db import models
 
 
 class Resume(models.Model):
-    class StatusVariants(models.IntegerChoices):
-        NOT_LOOKING = 0
-        JUST_WATCHING = 1
-        LOOKING_FOR_JOB = 2
+    class StatusVariants(models.TextChoices):
+        NOT_LOOKING = 'Not looking for a job'
+        JUST_WATCHING = 'Just watching'
+        LOOKING_FOR_JOB = 'Looking for a job'
 
-    class EducationVariants(models.IntegerChoices):
-        SECONDARY = 0
-        HIGHER = 1
+    class EducationVariants(models.TextChoices):
+        SECONDARY = 'Secondary'
+        HIGHER = 'Higher'
 
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
-    status = models.SmallIntegerField(choices=StatusVariants.choices)
+    status = models.CharField(max_length=100, choices=StatusVariants.choices)
     grade = models.PositiveSmallIntegerField()
     specialty = models.CharField(max_length=255)
     salary = models.FloatField()
-    education = models.SmallIntegerField(choices=EducationVariants.choices)
+    education = models.CharField(max_length=25, choices=EducationVariants.choices)
     experience = models.TextField()
     portfolio = models.URLField()
     title = models.CharField(max_length=255)

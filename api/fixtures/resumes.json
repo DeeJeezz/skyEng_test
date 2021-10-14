@@ -3,11 +3,11 @@
     "model": "api.resume",
     "pk": "26c940a1-7228-4ea2-a3bce6460b172040",
     "fields": {
-      "status": 1,
+      "status": "Just watching",
       "grade": 3,
       "specialty": "Engineer",
       "salary": 70000,
-      "education": 1,
+      "education": "Higher",
       "experience": "*some info about experience*",
       "portfolio": "https://portfolio.com/engineer",
       "title": "Best Engineer Ever",
@@ -20,11 +20,11 @@
     "model": "api.resume",
     "pk": "e13ad0ce-c55f-4299-aa5e-f8461d237955",
     "fields": {
-      "status": 2,
+      "status": "Not looking for a job",
       "grade": 5,
       "specialty": "Dentist",
       "salary": 150000,
-      "education": 1,
+      "education": "Higher",
       "experience": "*some info about experience*",
       "portfolio": "https://portfolio.com/dentist",
       "title": "Best Dentist Ever",
@@ -37,36 +37,17 @@
     "model": "api.resume",
     "pk": "84b08e73-6013-4f8c-ac12-9bc9659a957a",
     "fields": {
-      "status": 0,
+      "status": "Looking for a job",
       "grade": 2,
       "specialty": "Cook",
       "salary": 1000,
-      "education": 0,
+      "education": "Secondary",
       "experience": "*some info about experience*",
       "portfolio": "https://portfolio.com/cook",
       "title": "Average Cook Ever",
       "phone": "+355691468542",
       "email": "cook@example.com",
       "owner": 2
-    }
-  },
-  {
-    "model": "auth.User",
-    "pk": "2",
-    "fields": {
-      "username": "user",
-      "email": "user@user.com",
-      "password": "password"
-    }
-  },
-  {
-    "model": "auth.User",
-    "pk": "1",
-    "fields": {
-      "username": "admin",
-      "email": "admin@admin.com",
-      "password": "pbkdf2_sha256$260000$m2P3Wdvq9q3KClrfQc2zVN$TU8WdmUe1KLt5mH32VL1OYKYW9P0VhXUPhv90/r8CR4=",
-      "is_superuser": true
     }
   }
 ]
